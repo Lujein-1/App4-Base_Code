@@ -132,10 +132,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p style="color:black;">Do you feel a consistent or persistent shortness of breath or difficulty breathing?</p> <!--printed content, question content-->
 			<a href="#four"  onclick="COVID19Add();" class="w3-btn w3-black"> Yes</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
-			<a href="four"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
+			<a href="#four"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
 	</div> <!--content-->
 
+</div>
+	
 <div class="page" id="four"> <!--contains page content and identification-->
 	<div id="header" class="w3-container w3-flat-emerald"> <!--containts header customizations-->
 		<h1>Question 4</h1> <!--contains header content-->
@@ -145,7 +147,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p style="color:black;">Have you noticed your eyes are red or swollen?</p> <!--printed content, question content-->
 			<a href="#five"  onclick="COVID19Add();" class="w3-btn w3-black"> Yes</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
-			<a href="five"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
+			<a href="#five"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
 	</div> <!--content-->
 </div>
@@ -159,13 +161,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p style="color:black;">Were your symptoms sudden?</p> <!--printed content, question content-->
 			<a href="#six"  onclick="fluAdd();" class="w3-btn w3-black"> Yes</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
-			<a href="six"  onclick="COVID19Add();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
+			<a href="#six"  onclick="COVID19Add();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
 		of whether a patient has COVID19 or the flu-->
 	</div> <!--content-->
 
 </div>
 
-<div class="page" id="seven"> <!--contains page content and identificaiton-->
+<div class="page" id="six"> <!--contains page content and identificaiton-->
 	<div class="w3-container w3-flat-emerald"> <!--contains header customizations-->
 		<h1>Results</h1> <!--contains header content-->
 	</div>
@@ -175,8 +177,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<script> // contains javascript content for getResults function
 			function getResults () // function that makes results with probabilities appear in results paragraph
 			{
-			var COVID19Percent = 100*(COVID19_count/6); // variable that calculates COVID19 probability.
-			var fluPercent = 100*(flu_count/6); // variable that calculates flu probability
+			var COVID19Percent = 100*(COVID19_count/5); // variable that calculates COVID19 probability.
+			var fluPercent = 100*(flu_count/5); // variable that calculates flu probability
 			var resultText = document.getElementById("results"); // variable that stores results text
 			resultText. innerHTML = "Probability it is COVID19 = " + COVID19Percent + "%" + "<br> Probability it is the flu = " + fluPercent + "%";
 			} // text that pops up in results paragraph when you click button, added & in quotation marks to see percent symbol after number
@@ -187,7 +189,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 </div> <footer class="w3-bottom w3-container w3-flat-emerald">
 	<p>DIY!</p>
-
 </footer>
 		
 </body>
