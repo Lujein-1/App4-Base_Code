@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The Goal of Code in this app is to correctly and as accurately as possible determine if the user/patient has COVID-19 or the flu by using
+and improving my coding skill. It is also to help improve general coding skills and learn how to input an image through code. 
  
 Known Issues:
-blah, blah, blah, blah
+Known issues with this web-based app is that it is not an advanced website and it is not an accurate source of diagnosis. 
 Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
 
 References:
@@ -37,8 +38,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+	var COVID19_count = 0; //identifying and establishing variables 
+        var flu_count = 0; //identifying and establishing variables 
 
-	//YOUR JAVASCRIPT GOES HERE
+
+        function COVID19Add(){
+            COVID19_count = COVID19_count + 1;  
+        }
+
+        function fluAdd(){
+            flu_count = flu_count + 1;
+        }
+
+	//These are the javascript functions made to count the number of answers that support the user having 
+	//COVID19 or the flu to later calculate the probability of whether the patient has the flu or COVID19
 
 </script>	
 
@@ -66,10 +79,51 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 }
 </style>
 
+	<!--That previous section of code sets up the app so that it will display pages within the html body-->
 <body>
-	
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
-	REPLACE THIS TEXT
-	
+<div id="header" class="w3-container w3-flat-emerald">
+	<h1>COVID-19 or the Flu?</h1> <!--This is what is in the header-->
+</div>
+
+<div id="content" class="w3-flat-emerald">
+	<p>Do you feel like you may be confused on whether you have COVID-19 or the flu? The symptoms are similar but 
+	this quiz might help you figure out which one it is! Answer a few short questions to get your result!</p> <!--content being printed on the screen in the body-->
+
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--The button that begins the quiz-->
+
+
+<div class="page" id="one"> <!--contains page content and identification-->
+	<div id="header" class="w3-flat-emerald"> <!--containts header customizations-->
+		<h1>Question 1</h1> <!--contains header content-->
+	</div>
+
+	<div id="content" class="w3-container"> <!--page customizations-->
+		<p>Do you have a new loss of sense of taste or smell?</p> <!--printed content, question content-->
+			<a href="#two"  onclick="COVID19Add();" class="w3-btn w3-black"> Yes</a> <!--button function to record question response to calculate probablility
+		of whether a patient has COVID19 or the flu-->
+			<a href="two"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
+		of whether a patient has COVID19 or the flu-->
+	</div> <!--content-->
+
+</div>
+
+<div class="page" id="two"> <!--contains page content and identification-->
+	<div id="header" class="w3-flat-emerald"> <!--containts header customizations-->
+		<h1>Question 2</h1> <!--contains header content-->
+	</div>
+
+	<div id="content" class="w3-container"> <!--page customizations-->
+		<p>Do you feel that you have dry mouth?</p> <!--printed content, question content-->
+			<a href="#three"  onclick="COVID19Add();" class="w3-btn w3-black"> Yes</a> <!--button function to record question response to calculate probablility
+		of whether a patient has COVID19 or the flu-->
+			<a href="three"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!--button function to record question response to calculate probablility
+		of whether a patient has COVID19 or the flu-->
+	</div> <!--content-->
+		
+
+
+
+		
 </body>
 </html>
