@@ -77,6 +77,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     left: 0vw;
     z-index: 1;
 }
+	img, object{
+		max-height:90%;
+		max-width:90%;
+	}
 </style>
 
 	<!--That previous section of code sets up the app so that it will display pages within the html body-->
@@ -86,12 +90,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<h1>COVID-19 or the Flu?</h1> <!--This is what is in the header-->
 </div>
 
-<div id="content" class="w3-flat-emerald">
-	<p>Do you feel like you may be confused on whether you have COVID-19 or the flu? The symptoms are similar but 
+<div id="content" class="w3-container">
+	<p style="color:black;">Do you feel like you may be confused on whether you have COVID-19 or the flu? The symptoms are similar but 
 	this quiz might help you figure out which one it is! Answer a few short questions to get your result!</p> <!--content being printed on the screen in the body-->
 
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--The button that begins the quiz-->
-
+<img src="https://www.verywellhealth.com/thmb/Kidm91prtuzazGf1ShjQPjHNxfI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1266494470-56273107e06842bdacc9074754645663.jpg" alt="Doctors treating patient with mask">
 
 <div class="page" id="one"> <!--contains page content and identification-->
 	<div id="header" class="w3-container w3-flat-emerald"> <!--containts header customizations-->
